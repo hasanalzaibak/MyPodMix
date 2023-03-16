@@ -1,0 +1,118 @@
+@import "../../styles/variables";
+
+#header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 0rem 1rem;
+  padding-top: 1rem;
+}
+
+.header__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  video {
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -10;
+    filter: grayscale(1) brightness(0.4);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, #d831f7 0%, #f77531 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+}
+
+.header__content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  button {
+    a {
+      text-decoration: none;
+    }
+    outline: none;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: linear-gradient(270deg, #f77531 0%, #d831f7 100%);
+    width: 15rem;
+    transition: 0.2s ease-in-out;
+    
+    &:hover {
+      box-shadow: 0px -5px rgba(255, 255, 255, 0.2),
+        0px -10px rgba(255, 255, 255, 0.1),
+        0px -15px rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+
+.header__nav {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    a {
+      text-decoration: none;
+    }
+    li {
+      list-style: none;
+      margin-left: 1rem;
+      letter-spacing: 2px;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  img {
+    width: 8rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .header__content {
+    h1 {
+      font-size: 8rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    &-text {
+      button {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        width: 20rem;
+      }
+    }
+  }
+}

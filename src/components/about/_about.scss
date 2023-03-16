@@ -1,0 +1,47 @@
+#about {
+  padding: 4rem 2rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: left;
+    line-height: 30px;
+    word-spacing: 2px;
+    font-size: 1.1rem;
+    background: rgba($pink, 0.1);
+    backdrop-filter: blur(50px);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    font-weight: 300;
+    span {
+      color: $orange;
+      font-weight: 700;
+    }
+  }
+
+  img {
+    width: 20rem;
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #about {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    img {
+      width: 35rem;
+    }
+  }
+
+ 
+}

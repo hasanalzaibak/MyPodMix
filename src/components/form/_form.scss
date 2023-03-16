@@ -1,0 +1,147 @@
+@import "../../styles/variables";
+
+#form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 2rem;
+  font-weight: 300;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba($orange, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 600px;
+
+    button {
+      outline: none;
+      border: none;
+      padding: 1.2rem;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      background: linear-gradient(270deg, #f77531 0%, #d831f7 100%);
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        box-shadow: 0px -5px rgba(255, 255, 255, 0.2),
+          0px -10px rgba(255, 255, 255, 0.1),
+          0px -15px rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+
+#genre,
+#duration,
+#language,
+#firstPodcast,
+#secondPodcast,
+#thirdPodcast {
+  outline: none;
+  border: none;
+  color: $pink;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  text-align: center;
+  background: $gray;
+  line-height: 30px;
+  word-spacing: 2px;
+  font-size: 1.1rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.form__response {
+  text-align: center;
+  max-width: 600px;
+  &-loader {
+    i {
+      animation: spin 2s linear infinite;
+      text-align: center;
+      font-size: 2rem;
+      margin: 2rem 0rem;
+    }
+  }
+
+  &-podcasts {
+    margin: 2rem 0rem;
+    line-height: 30px;
+    word-spacing: 2px;
+    font-size: 1.2rem;
+    background: rgba($pink, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 1rem;
+    padding: 1rem;
+    animation-name: pulse; /* Name of the animation */
+    animation-duration: 3s; /* Duration of one cycle */
+    animation-iteration-count: infinite; /* Repeat indefinitely */
+    animation-direction: alternate; /* Alternate between forward and backward */
+    text-align: left;
+  }
+
+  &-icons {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+    i {
+      color: $orange;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    /* Start state */
+    background: rgba($pink, 0.1); /* Same as original background color */
+  }
+  50% {
+    /* Middle state */
+    background: rgba($pink, 0.2); /* A lighter shade of pink */
+  }
+  100% {
+    /* End state */
+    background: rgba($pink, 0.15); /* A darker shade of pink */
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #form {
+    form {
+      font-size: 1.2rem;
+      button {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .form__response {
+    &-podcasts {
+      font-size: 1.4rem;
+    }
+  }
+}

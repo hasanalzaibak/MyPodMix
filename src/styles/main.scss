@@ -1,0 +1,69 @@
+@import "../components/form/form";
+@import "../components/header/header";
+@import "./variables";
+@import "../components/about/about";
+@import "../components/footer/footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $white;
+  font-family: "Dosis", sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+.app__container {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    ellipse at 47% 0%,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(59, 59, 59, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    ellipse at 47% 0%,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(59, 59, 59, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    ellipse at 47% 0%,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(59, 59, 59, 1) 100%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    ellipse at 47% 0%,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(59, 59, 59, 1) 100%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    ellipse at 47% 0%,
+    rgba(130, 130, 130, 1) 0%,
+    rgba(59, 59, 59, 1) 100%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $orange;
+}
+
+::selection {
+  background-color: rgb(35, 35, 35);
+}
